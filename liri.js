@@ -45,7 +45,6 @@ function myTweets() {
   };
   
   client.get('statuses/user_timeline', params, function (error, tweets, response) {
-
     if (!error) {
       //Pretty print tweets object
       //console.log(JSON.stringify(tweets, null, 2));
@@ -66,9 +65,7 @@ function myTweets() {
       //Print error
       console.log(error);
     }
-
   });
-
 };
 
 
@@ -80,13 +77,11 @@ function spotifyThisSong(songName) {
     secret: "289530e972ad445590afb1722cd507a7"
   });
 
-
   var songName = process.argv[3];
   if (!songName) {
     songName = "Ace of Bass";
   }
   userRequest = songName;
-
 
   spotify.search({
     type: 'track',
@@ -110,7 +105,6 @@ function spotifyThisSong(songName) {
   });
 };
 
-
 // Function movieThis
 function movieThis() {
 
@@ -120,10 +114,8 @@ function movieThis() {
   }
   params = movie
 
-
   var movieName = "Titanic";
   var queryUrl = "http://www.omdbapi.com/?t=" + params + "&y=&plot=short&apikey=trilogy";
-
 
   request(queryUrl, function (error, response, body) {
 
@@ -145,7 +137,6 @@ function movieThis() {
 
     }
   });
-
 };
 
 // Function do what it says
